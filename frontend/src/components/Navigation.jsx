@@ -2,6 +2,7 @@ import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import MichiContext from '../context/MichiContex.jsx'
 import { useContext } from 'react'
+import GatitoImage from '../imgs/gatito.png'
 
 const Navigation = () => {
   const { total, isAuthenticated } = useContext(MichiContext)
@@ -16,7 +17,7 @@ const Navigation = () => {
       {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => (
         <Navbar key={expand} expand={expand} className='nav p-0 m-0'>
           <Container fluid className='navigation'>
-            <NavLink to='/'><img className='logo' src='./public/gatito.png' alt='icono' /></NavLink>
+            <NavLink to='/'><img className='logo' src={GatitoImage} alt='icono' /></NavLink>
             <NavLink to='/' className='text-decoration-none'>
               <Navbar.Text className='nav_text'>
                 Michigan

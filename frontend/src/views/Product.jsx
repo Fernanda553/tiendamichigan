@@ -9,14 +9,14 @@ const Product = () => {
   const [producto, setProducto] = useState(null)
 
   useEffect(() => {
-    // Realizar una solicitud al backend para obtener los detalles del producto
-    fetch(`http://localhost:3000/products/${id}`) // Asegúrate de que esta URL coincida con la ruta de tu backend
+    const baseUrl = import.meta.env.VITE_URLBASE
+
+    fetch(`${baseUrl}/products/${id}`) 
       .then(response => response.json())
-      .then(data => setProducto(data[0])) // Modificación aquí: acceder al primer elemento del array
+      .then(data => setProducto(data[0]))
       .catch(error => console.error('Error:', error))
   }, [id])
 
-  // Mostrar un mensaje mientras se carga el producto
   if (!producto) return <div>Cargando detalles del producto...</div>
 
   return (
