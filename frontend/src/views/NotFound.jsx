@@ -1,7 +1,6 @@
 import { Container } from 'react-bootstrap'
 import GatitoImage2 from '../imgs/gatito2.png'
 
-
 const NotFound = () => {
   return (
     <Container fluid className='notFound'>

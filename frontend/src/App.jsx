@@ -1,10 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { PublicRoute, PrivateRoute } from './routes'
-import Navigation from './components/Navigation.jsx'
-import Footer from './components/Footer.jsx'
-import * as viewsStore from './views/index.js'
-import MichiContext from './context/MichiContex.jsx'
-import { useCart } from './hooks/useCart.jsx'
+import * as components from './components'
+import * as viewsStore from './views/index'
+import MichiContext from './context/MichiContex'
+import useCart from './hooks/useCart'
 
 function App () {
   const allState = useCart()
@@ -12,7 +11,7 @@ function App () {
   return (
     <MichiContext.Provider value={allState}>
       <BrowserRouter>
-        <Navigation />
+        <components.Navigation />
         <Routes>
           <Route
             path='/'
@@ -45,7 +44,7 @@ function App () {
           <Route path='/thanks' element={<viewsStore.Thanks />} />
           <Route path='*' element={<viewsStore.NotFound />} />
         </Routes>
-        <Footer />
+        <components.Footer />
       </BrowserRouter>
     </MichiContext.Provider>
   )

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { ENDPOINT } from '../config/constans'
 
-export function useCart () {
+const useCart = () => {
   const [user, setUser] = useState({ email: '', password: '' })
   const [productos, setProductos] = useState([])
   const [cart, setCart] = useState([])
@@ -29,7 +29,7 @@ export function useCart () {
       }
       setProductos(products)
     } catch (error) {
-      console.error(error)
+      console.error()
     }
   }
 
@@ -106,3 +106,5 @@ export function useCart () {
     removeFromCart
   }
 }
+
+export default useCart

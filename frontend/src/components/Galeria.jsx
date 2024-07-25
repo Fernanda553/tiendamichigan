@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Button, Card, Col } from 'react-bootstrap'
 import MichiContext from '../context/MichiContex.jsx'
 
-function Galeria ({ products }) {
+const Galeria = ({ products }) => {
   const { addCart } = useContext(MichiContext)
   const navigate = useNavigate()
 
