@@ -20,9 +20,10 @@ const Register = () => {
       window.alert(`${error.response.data.message} 🙁.`)
     }
   }
+
   return (
-    <Container fluid>
-      <h1 className='p-3'>Registrate</h1>
+    <Container fluid className='text-center'>
+      <h1 className='p-3 text-dark'>Registrate</h1>
       <Form onSubmit={getData} className='form_register'>
         <Form.Group controlId='nombre'>
           <Form.Label>Nombre: </Form.Label>

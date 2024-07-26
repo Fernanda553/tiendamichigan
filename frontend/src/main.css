@@ -115,11 +115,6 @@ background: radial-gradient(circle,
 
 .register{
   width: 60rem;
-  height: 40rem;
-  border-radius: 15%;
-  text-align: center;
-  margin: auto;
-  margin-top: 9rem;
   background-color:rgba(157,159,255,1)
 }
 
