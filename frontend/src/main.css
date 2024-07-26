@@ -106,19 +106,8 @@ background: radial-gradient(circle,
   border-radius: 40%;
 }
 
-.form_login{
-  width: 40rem;
-  text-align: center;
-  margin: auto;
-  margin-top: 9rem;
-}
-
-.register{
-  width: 60rem;
-  background-color:rgba(157,159,255,1)
-}
-
-.form_register{
+.containers {
+  max-width: 60rem;
   margin: auto;
   text-align: center;
 }

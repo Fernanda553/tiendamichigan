@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import MichiContext from '../context/MichiContex.jsx'
 import { ENDPOINT } from '../config/constans.jsx'
 import { Button, Container, Form } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const Login = () => {
   const { login, user, setUser } = useContext(MichiContext)
@@ -26,11 +26,13 @@ const Login = () => {
   }
 
   return (
-    <Container fluid className='form_login'>
-      <h1 className='text-dark p-4'>Iniciar sesión</h1>
-      <Form onSubmit={getData}>
+    <Container fluid className='text-center'>
+      <h1 className='text-center text-dark p-4'>
+        Iniciar sesión
+      </h1>
+      <Form onSubmit={getData} className='containers'>
         <Form.Group controlId='user.email'>
-          <Form.Label>Email address: </Form.Label>
+          <Form.Label className='text-dark'>Email address: </Form.Label>
           <Form.Control
             className='text-center'
             type='email'
@@ -41,7 +43,7 @@ const Login = () => {
           />
         </Form.Group>
         <Form.Group className='mb-3' controlId='user.password'>
-          <Form.Label>Contraseña: </Form.Label>
+          <Form.Label className='text-dark pt-4'>Contraseña: </Form.Label>
           <Form.Control
             className='text-center'
             type='password'
@@ -51,8 +53,15 @@ const Login = () => {
             placeholder='Password'
           />
         </Form.Group>
-        <Button variant='outline-info' type='submit'>Iniciar sesíon</Button>
+        <Button
+          variant='outline-info
+        ' type='submit'
+          className='mt-3'
+        >
+          Iniciar sesíon
+        </Button>
       </Form>
+      <p className='text-success pt-4'>No tienes una cuenta? Haz clic <NavLink to='/register'>aquí</NavLink></p>
     </Container>
   )
 }
