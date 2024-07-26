@@ -22,45 +22,43 @@ const Register = () => {
   }
   return (
     <Container fluid>
-      <Container className='register'>
-        <h1 className='p-3'>Registrate</h1>
-        <Form onSubmit={getData} className='form_register'>
-          <Form.Group controlId='nombre'>
-            <Form.Label>Nombre: </Form.Label>
-            <Form.Control
-              className='text-center'
-              type='text'
-              value={userRegister.name}
-              onChange={handleChange}
-              name='nombre'
-              placeholder='Fernanda Nuñez'
-            />
-          </Form.Group>
-          <Form.Group controlId='email'>
-            <Form.Label>Email address: </Form.Label>
-            <Form.Control
-              className='text-center'
-              type='email'
-              value={userRegister.email}
-              onChange={handleChange}
-              name='email'
-              placeholder='name@example.com'
-            />
-          </Form.Group>
-          <Form.Group controlId='contraseña'>
-            <Form.Label>Contraseña: </Form.Label>
-            <Form.Control
-              className='text-center'
-              type='password'
-              value={userRegister.password}
-              onChange={handleChange}
-              name='password'
-              placeholder='Password'
-            />
-          </Form.Group>
-          <Button className='m-4' variant='outline-warning' type='submit'>Registrarme</Button>{' '}
-        </Form>
-      </Container>
+      <h1 className='p-3'>Registrate</h1>
+      <Form onSubmit={getData} className='form_register'>
+        <Form.Group controlId='nombre'>
+          <Form.Label>Nombre: </Form.Label>
+          <Form.Control
+            className='text-center'
+            type='text'
+            value={userRegister.name}
+            onChange={handleChange}
+            name='nombre'
+            placeholder='Fernanda Nuñez'
+          />
+        </Form.Group>
+        <Form.Group controlId='email'>
+          <Form.Label>Email address: </Form.Label>
+          <Form.Control
+            className='text-center'
+            type='email'
+            value={userRegister.email}
+            onChange={handleChange}
+            name='email'
+            placeholder='name@example.com'
+          />
+        </Form.Group>
+        <Form.Group controlId='contraseña'>
+          <Form.Label>Contraseña: </Form.Label>
+          <Form.Control
+            className='text-center'
+            type='password'
+            value={userRegister.password}
+            onChange={handleChange}
+            name='password'
+            placeholder='Password'
+          />
+        </Form.Group>
+        <Button className='m-4' variant='outline-warning' type='submit'>Registrarme</Button>{' '}
+      </Form>
     </Container>
   )
 }
