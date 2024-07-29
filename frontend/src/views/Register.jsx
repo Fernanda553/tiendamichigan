@@ -2,9 +2,11 @@ import axios from 'axios'
 import { useState } from 'react'
 import { Button, Container, Form } from 'react-bootstrap'
 import { ENDPOINT } from '../config/constans'
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
   const [userRegister, setUserRegister] = useState({ nombre: '', email: '', password: '' })
+  const navigate = useNavigate()
 
   const handleChange = (event) => {
     setUserRegister({ ...userRegister, [event.target.name]: event.target.value })
@@ -14,7 +16,12 @@ const Register = () => {
     try {
       event.preventDefault()
       const response = await axios.post(ENDPOINT.register, userRegister)
+
       window.alert('Usuario registrado con éxito 😀.')
+
+      setUserRegister({ nombre: '', email: '', password: '' })
+      navigate('/login')
+
       console.log(response.data)
     } catch (error) {
       window.alert(`${error.response.data.message} 🙁.`)
@@ -30,7 +37,7 @@ const Register = () => {
           <Form.Control
             className='text-center'
             type='text'
-            value={userRegister.name}
+            value={userRegister.nombre}
             onChange={handleChange}
             name='nombre'
             placeholder='Fernanda Nuñez'
