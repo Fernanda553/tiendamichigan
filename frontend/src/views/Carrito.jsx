@@ -37,7 +37,7 @@ const Carrito = () => {
                   >
                     -
                   </Button>
-                  <span className='text-dark'>{producto.quantity}</span>
+                  <span className='text-dark'>{producto?.quantity}</span>
                   <Button
                     className='mx-4'
                     variant='outline-info'
@@ -46,7 +46,7 @@ const Carrito = () => {
                     +
                   </Button>
                 </div>
-                <h4 className='text-dark'>${producto.quantity * producto.precio}</h4>
+                <h4 className='text-dark'>${producto?.quantity * producto?.precio}</h4>
               </li>
             ))}
           </ul>
