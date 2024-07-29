@@ -32,25 +32,29 @@ const Login = () => {
       </h1>
       <Form onSubmit={getData} className='containers'>
         <Form.Group controlId='user.email'>
-          <Form.Label className='text-dark'>Email address: </Form.Label>
+          <Form.Label className='text-dark'>
+            Correo electrónico:
+          </Form.Label>
           <Form.Control
             className='text-center'
             type='email'
             value={user.email}
             onChange={handleChange}
             name='email'
-            placeholder='name@example.com'
+            placeholder='nombre@ejemplo.com'
           />
         </Form.Group>
         <Form.Group className='mb-3' controlId='user.password'>
-          <Form.Label className='text-dark pt-4'>Contraseña: </Form.Label>
+          <Form.Label className='text-dark pt-4'>
+            Contraseña:
+          </Form.Label>
           <Form.Control
             className='text-center'
             type='password'
             value={user.password}
             onChange={handleChange}
             name='password'
-            placeholder='Password'
+            placeholder='Contraseña'
           />
         </Form.Group>
         <Button
@@ -61,7 +65,10 @@ const Login = () => {
           Iniciar sesíon
         </Button>
       </Form>
-      <p className='text-success pt-4'>No tienes una cuenta? Haz clic <NavLink to='/register'>aquí</NavLink></p>
+      <p className='text-success pt-4'>
+        No tienes una cuenta? Haz clic
+        <NavLink to='/register'> aquí</NavLink>
+      </p>
     </Container>
   )
 }

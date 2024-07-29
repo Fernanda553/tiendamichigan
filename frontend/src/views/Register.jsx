@@ -44,14 +44,14 @@ const Register = () => {
           />
         </Form.Group>
         <Form.Group controlId='email'>
-          <Form.Label>Email address: </Form.Label>
+          <Form.Label> Correo electrónico: </Form.Label>
           <Form.Control
             className='text-center'
             type='email'
             value={userRegister.email}
             onChange={handleChange}
             name='email'
-            placeholder='name@example.com'
+            placeholder='nombre@gmail.com'
           />
         </Form.Group>
         <Form.Group controlId='contraseña'>
@@ -62,7 +62,7 @@ const Register = () => {
             value={userRegister.password}
             onChange={handleChange}
             name='password'
-            placeholder='Password'
+            placeholder='Contraseña'
           />
         </Form.Group>
         <Button className='m-4' variant='outline-warning' type='submit'>Registrarme</Button>{' '}
