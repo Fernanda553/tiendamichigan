@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import * as components from './components'
 import MichiContext from './context/MichiContex'
 import useCart from './hooks/useCart'
-import { publicRoutes, privateRoutes } from './routes/routes'
-import PublicRoute from './routes/PublicRoute'
+import { privateRoutes } from './routes/routes'
+import { PublicRoutes } from './components/PublicRoutes'
 
 function App () {
   const allState = useCart()
@@ -12,14 +12,8 @@ function App () {
     <MichiContext.Provider value={allState}>
       <BrowserRouter>
         <components.Navigation />
+        <PublicRoutes />
         <Routes>
-          {publicRoutes.map(({ path, Component }) => (
-            <Route
-              key={path}
-              path={path}
-              element={<PublicRoute> <Component /> </PublicRoute>}
-            />
-          ))}
 
           {privateRoutes.map(({ path, Component }) => (
             <Route
