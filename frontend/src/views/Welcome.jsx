@@ -17,6 +17,7 @@ export const Welcome = () => {
       <h1>
         Bienvenido
       </h1>
+      <p ref={welcomeElement}>🧸</p>
     </Container>
   )
 }

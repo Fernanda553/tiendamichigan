@@ -93,10 +93,8 @@ a:hover {
   align-items: center;
 }
 
-.welcome h1 img {
-  width: 50px; /* Ajusta el tamaño según tus necesidades */
-  height: auto;
-  margin-left: 10px; /* Espacio entre el texto y el sticker */
+.welcome p {
+  font-size: 100px;
 }
 
 .profile{
