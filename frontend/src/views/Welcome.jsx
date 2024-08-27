@@ -13,11 +13,10 @@ export const Welcome = () => {
   }, [])
 
   return (
-    <Container fluid className='text-center pt-4'>
-      <h1 ref={welcomeElement}>Bienvenido</h1>
-      <h2 className='pt-4 text-dark'>
-        Inicia sesión para ver nuestra galería!😸
-      </h2>
+    <Container fluid className='welcome'>
+      <h1>
+        Bienvenido
+      </h1>
     </Container>
   )
 }
