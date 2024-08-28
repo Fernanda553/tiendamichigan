@@ -30,7 +30,7 @@ nav {
   gap: 40px;
 }
 
-.nav_text{
+.nav_text {
   color: rgb(95, 41, 99);
   font-size: 30px;
 }
@@ -54,6 +54,7 @@ a {
 a:hover {
   color: #aad8dbea;
 }
+
 .welcome {
   position: relative;
   margin: 0;
@@ -97,7 +98,7 @@ a:hover {
   font-size: 100px;
 }
 
-.profile{
+.profile {
   width: 40rem;
   text-align: center;
   margin: auto;
@@ -107,10 +108,7 @@ a:hover {
 .aside {
   grid-area: aside;
   background: rgb(166,168,255);
-background: radial-gradient(circle,
- rgba(166,168,255,1) 0%,
-  rgba(157,159,255,1) 49%,
-   rgba(97,38,164,1) 100%);
+  background: radial-gradient(circle, rgba(166,168,255,1) 0%, rgba(157,159,255,1) 49%, rgba(97,38,164,1) 100%);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -127,6 +125,7 @@ background: radial-gradient(circle,
 
 .section {
   grid-area: section;
+  display: flex;
   flex-wrap: wrap;
   overflow-y: auto;
 }
@@ -137,14 +136,14 @@ background: radial-gradient(circle,
   margin: auto;
 }
 
-.thanks{
+.thanks {
   height: 100vh;
   color: rgb(7, 97, 82);
   background-color: #efeded;
   text-align: center;
 }
 
-.thanks > img{
+.thanks > img {
   border-radius: 40%;
 }
 
@@ -154,25 +153,24 @@ background: radial-gradient(circle,
   text-align: center;
 }
 
-.nuevoProducto{
-  width: 60rem;
+.newProduct {
+  max-width: 60rem;
   height: 40rem;
   border-radius: 15%;
   text-align: center;
   margin: auto;
   margin-top: 9rem;
   background: rgb(238,242,169);
-background: linear-gradient(0deg, rgba(238,242,169,1) 2%,
- rgb(233, 59, 239) 44%);
+  background: linear-gradient(0deg, rgba(238,242,169,1) 2%, rgb(233, 59, 239) 44%);
 }
 
-.form-newProduct{
+.form-newProduct {
   width: 50rem;
   margin: auto;
   text-align: center;
 }
 
-.carrito{
+.carrito {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -181,32 +179,28 @@ background: linear-gradient(0deg, rgba(238,242,169,1) 2%,
   text-align: center;
 }
 
-.carrito_cards{
+.carrito_cards {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.cart-total{
+.cart-total {
   display: flex;
   justify-content: center;
   text-align: center;
   margin: 10px;
 }
 
-.galeria_card{
-  width: 18rem;
-  border: 1px solid #000;
-  margin: auto;
-  margin-top: 3rem;
+.galery-card {
+  max-width: 18rem;
+  height: 400px;
+  margin-top: 40px;
 }
 
-.galeria_one_card{
-  width: 35rem;
-  background-color: rgb(241, 238, 235);
-  margin: auto;
-  margin-top: 3rem;
-  text-align: center;
+.galery-card img {
+  height: 300px;
+  object-fit: cover;
 }
 
 footer {
@@ -249,12 +243,10 @@ footer {
       "footer section";
   }
 
-
-    nav{
-      display: flex;
-      flex-direction: column;
-    }
-
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
 
   .navigation {
     flex-direction: column;
@@ -266,9 +258,4 @@ footer {
   select {
     width: 300px;
   }
-
-  .section {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
-

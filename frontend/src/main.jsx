@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import './main.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 // import { worker } from '../__mocks__/browser.js'
 
 /* if (process.env.NODE_ENV === 'development') {

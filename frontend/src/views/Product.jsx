@@ -20,8 +20,8 @@ const Product = () => {
   if (!producto) return <div>Cargando detalles del producto...</div>
 
   return (
-    <Container fluid className='producto'>
-      <Card className='galeria_one_card'>
+    <Container fluid>
+      <Card className='galery_one_card'>
         <Card.Img variant='top' src={producto.img} />
         <Card.Body>
           <Card.Title>{producto.titulo}</Card.Title>

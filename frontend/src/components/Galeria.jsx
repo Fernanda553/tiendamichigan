@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Button, Card, Col } from 'react-bootstrap'
+import { Button, Card, Col, Row } from 'react-bootstrap'
 import MichiContext from '../context/MichiContex.jsx'
 
 const Galeria = ({ products }) => {
@@ -12,37 +12,27 @@ const Galeria = ({ products }) => {
   }
 
   return (
-    <>
-      {products?.map((producto) => {
-        return (
-          <Col key={producto?.id} className='m-0'>
-            <Card className='galeria_card'>
-              <Card.Img variant='top' src={producto?.img} />
-              <Card.Body className='text-center'>
-                <Card.Title>{producto?.titulo}</Card.Title>
-                <Card.Text className='text-dark'>
-                  Precio: $ {producto?.precio}
-                </Card.Text>
-                <Button
-                  className='m-2'
-                  variant='outline-primary'
-                  onClick={() => handlerClick(producto.id)}
-                >
-                  Ver más 👀
-                </Button>
-                <Button
-                  className='m-2'
-                  variant='outline-danger'
-                  onClick={() => addCart(producto)}
-                >
-                  Añadir 🛒
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        )
-      })}
-    </>
+    <Row>
+      {products?.map((producto) => (
+
+        <Col key={producto.id}>
+          <Card
+            className='galery-card'
+            onClick={() => handlerClick(producto.id)}
+          >
+            <Card.Img variant='top' src={producto?.img} />
+            <Card.Body className='text-center'>
+              <Card.Title>{producto?.titulo}</Card.Title>
+              <Card.Text className='text-dark'>
+                Precio: $ {producto?.precio}
+              </Card.Text>
+              <Button variant='primary' onClick={() => addCart(producto)}>Añadir 🛒</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+
+      ))}
+    </Row>
   )
 }
 

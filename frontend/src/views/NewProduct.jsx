@@ -22,7 +22,7 @@ const NewProduct = () => {
   }
 
   return (
-    <Container fluid className='nuevoProducto'>
+    <Container fluid className='newProduct'>
       <h1 className='text-danger p-4'>Nuevo Producto</h1>
       <div>
         <Form onSubmit={getData} className='form-newProduct'>
