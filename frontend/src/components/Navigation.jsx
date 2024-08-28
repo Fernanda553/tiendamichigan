@@ -12,74 +12,83 @@ const Navigation = () => {
   }
 
   return (
-    <>
-      <Navbar className='bg-body-tertiary p-0 m-0' expand='lg'>
-        <Container fluid className='navigation'>
-          <Navbar.Brand as={NavLink} to='/' className='d-flex align-items-center'>
-            <img className='logo' src={GatitoImage} alt='icono' width='30' height='30' />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls='offcanvasNavbar' />
-          <Navbar.Offcanvas
-            id='offcanvasNavbar'
-            aria-labelledby='offcanvasNavbarLabel'
-            placement='end'
-          >
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title id='offcanvasNavbarLabel'>Menu</Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-              <Nav className='d-flex flex-column justify-content-end flex-grow-1 pe-3'>
-                {isAuthenticated && (
-                  <NavLink
-                    to='/profile'
-                    className={isActiveLink}
-                    onClick={() => document.getElementById('offcanvasNavbar').classList.remove('show')}
-                  >
-                    Mi cuenta
-                  </NavLink>
-                )}
-                {!isAuthenticated && (
-                  <NavLink
-                    to='/register'
-                    className={isActiveLink}
-                    onClick={() => document.getElementById('offcanvasNavbar').classList.remove('show')}
-                  >
-                    Registrarse
-                  </NavLink>
-                )}
-                {!isAuthenticated && (
-                  <NavLink
-                    to='/login'
-                    className={isActiveLink}
-                    onClick={() => document.getElementById('offcanvasNavbar').classList.remove('show')}
-                  >
-                    Iniciar sesión
-                  </NavLink>
-                )}
-                {isAuthenticated && (
-                  <NavLink
-                    to='/newproduct'
-                    className={isActiveLink}
-                    onClick={() => document.getElementById('offcanvasNavbar').classList.remove('show')}
-                  >
-                    Nuevo producto
-                  </NavLink>
-                )}
-                {isAuthenticated && (
-                  <NavLink
-                    to='/carrito'
-                    className={isActiveLink}
-                    onClick={() => document.getElementById('offcanvasNavbar').classList.remove('show')}
-                  >
-                    🛒 $ {total}
-                  </NavLink>
-                )}
-              </Nav>
-            </Offcanvas.Body>
-          </Navbar.Offcanvas>
-        </Container>
-      </Navbar>
-    </>
+
+    <Navbar className='bg-body-tertiary p-0 m-0' expand='lg'>
+      <Container fluid className='navigation'>
+        <Navbar.Brand as={NavLink} to='/' className='d-flex align-items-center'>
+          <img className='logo' src={GatitoImage} alt='icono' width='30' height='30' />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls='offcanvasNavbar' />
+        <Navbar.Offcanvas
+          id='offcanvasNavbar'
+          aria-labelledby='offcanvasNavbarLabel'
+          placement='end'
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title id='offcanvasNavbarLabel'>Menu</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className='d-flex flex-column justify-content-end flex-grow-1 pe-3'>
+              {isAuthenticated && (
+                <NavLink
+                  to='/profile'
+                  className={isActiveLink}
+                  onClick={() => document.getElementById('offcanvasNavbar').classList.remove('show')}
+                >
+                  Mi cuenta
+                </NavLink>
+              )}
+              {!isAuthenticated && (
+                <NavLink
+                  to='/register'
+                  className={isActiveLink}
+                  onClick={() => document.getElementById('offcanvasNavbar').classList.remove('show')}
+                >
+                  Registrarse
+                </NavLink>
+              )}
+              {!isAuthenticated && (
+                <NavLink
+                  to='/login'
+                  className={isActiveLink}
+                  onClick={() => document.getElementById('offcanvasNavbar').classList.remove('show')}
+                >
+                  Iniciar sesión
+                </NavLink>
+              )}
+              {!isAuthenticated && (
+                <NavLink
+                  to='/products'
+                  className={isActiveLink}
+                  onClick={() => document.getElementById('offcanvasNavbar').classList.remove('show')}
+                >
+                  Galería
+                </NavLink>
+              )}
+              {isAuthenticated && (
+                <NavLink
+                  to='/newproduct'
+                  className={isActiveLink}
+                  onClick={() => document.getElementById('offcanvasNavbar').classList.remove('show')}
+                >
+                  Nuevo producto
+                </NavLink>
+              )}
+              {isAuthenticated && (
+                <NavLink
+                  to='/carrito'
+                  className={isActiveLink}
+                  onClick={() => document.getElementById('offcanvasNavbar').classList.remove('show')}
+                >
+                  🛒 $ {total}
+                </NavLink>
+              )}
+            </Nav>
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
+      </Container>
+    </Navbar>
+
   )
 }
 

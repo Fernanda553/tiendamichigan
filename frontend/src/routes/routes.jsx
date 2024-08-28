@@ -7,6 +7,11 @@ export const publicRoutes = [
 
   },
   {
+    path: '/products',
+    Component: views.Product
+
+  },
+  {
     path: '/login',
     Component: views.Login
 
@@ -14,11 +19,6 @@ export const publicRoutes = [
   {
     path: '/register',
     Component: views.Register
-
-  },
-  {
-    path: '/products/:id',
-    Component: views.Product
 
   },
 
@@ -49,6 +49,11 @@ export const privateRoutes = [
   {
     path: '/profile',
     Component: views.Profile
+
+  },
+  {
+    path: '/products/:id',
+    Component: views.Product
 
   }
 
