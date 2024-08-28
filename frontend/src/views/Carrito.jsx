@@ -16,9 +16,9 @@ const Carrito = () => {
 
   return (
     <Container fluid className='m-0'>
-      <div className='carrito'>
+      <div className='cart'>
         <h4 className='text-dark p-4'>Detalles del pedido:</h4>
-        <div className='carrito_cards'>
+        <div className='cart_cards'>
           <ul>
             {cart?.map((producto) => (
               <li key={producto?.id} className='cart-total'>

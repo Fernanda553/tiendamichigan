@@ -23,8 +23,8 @@ const Galeria = ({ products }) => {
             <Card.Img variant='top' src={producto?.img} />
             <Card.Body className='text-center'>
               <Card.Title>{producto?.titulo}</Card.Title>
-              <Card.Text className='text-dark'>
-                Precio: $ {producto?.precio}
+              <Card.Text className='text-success'>
+                Precio:<span className='text-caveat'> ${producto.precio}</span>
               </Card.Text>
               <Button variant='primary' onClick={() => addCart(producto)}>Añadir 🛒</Button>
             </Card.Body>
