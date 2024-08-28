@@ -4,7 +4,7 @@ import { Button, Card, Col, Row } from 'react-bootstrap'
 import MichiContext from '../context/MichiContex.jsx'
 
 const Galeria = ({ products }) => {
-  const { addCart } = useContext(MichiContext)
+  const { addCart, isAuthenticated } = useContext(MichiContext)
   const navigate = useNavigate()
 
   const handlerClick = (id) => {
@@ -26,7 +26,8 @@ const Galeria = ({ products }) => {
               <Card.Text className='text-success'>
                 Precio:<span className='text-caveat'> ${producto.precio}</span>
               </Card.Text>
-              <Button variant='primary' onClick={() => addCart(producto)}>Añadir 🛒</Button>
+              {isAuthenticated &&
+               (<Button variant='primary' onClick={() => addCart(producto)}>Añadir 🛒</Button>)}
             </Card.Body>
           </Card>
         </Col>
