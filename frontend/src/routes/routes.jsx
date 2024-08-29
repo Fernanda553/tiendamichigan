@@ -7,11 +7,6 @@ export const publicRoutes = [
 
   },
   {
-    path: '/products',
-    Component: views.Product
-
-  },
-  {
     path: '/login',
     Component: views.Login
 
@@ -19,6 +14,11 @@ export const publicRoutes = [
   {
     path: '/register',
     Component: views.Register
+
+  },
+  {
+    path: '/products',
+    Component: views.Products
 
   },
 
