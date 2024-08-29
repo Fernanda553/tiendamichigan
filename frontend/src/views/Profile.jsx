@@ -9,13 +9,13 @@ const Profile = () => {
 
   const logOut = () => logout()
   return (
-    <Container fluid>
-      <div className='profile'>
-        <h1 className='text-danger'>
-          Bienvenido <span className='fw-bold text-dark'>{user?.email}</span>
-        </h1>
-        <Button className='text-dark m-3' variant='outline-info' onClick={logOut}>Cerrar sesíon</Button>
-      </div>
+    <Container fluid className='profile'>
+
+      <h1 className='text-danger'>
+        Bienvenido <span className='fw-bold text-dark'>{user?.email}</span>
+      </h1>
+      <Button className='text-dark m-3' variant='outline-info' onClick={logOut}>Cerrar sesíon</Button>
+
     </Container>
   )
 }

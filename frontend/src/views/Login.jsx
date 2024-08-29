@@ -18,7 +18,7 @@ const Login = () => {
     axios.post(ENDPOINT.login, user)
       .then(({ data }) => {
         if (data?.token) { login(data.token) }
-        navigate('/')
+        navigate('/products')
       })
       .catch((error) => {
         window.alert(`${error.response.data.message} 🙁.`)

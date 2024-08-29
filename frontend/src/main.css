@@ -109,7 +109,7 @@ a:hover {
 }
 
 .profile {
-  width: 40rem;
+  max-width: 40rem;
   text-align: center;
   margin: auto;
   margin-top: 9rem;
@@ -175,7 +175,7 @@ a:hover {
 }
 
 .form-newProduct {
-  width: 50rem;
+  max-width: 50rem;
   margin: auto;
   text-align: center;
 }
