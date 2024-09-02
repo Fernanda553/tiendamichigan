@@ -18,9 +18,12 @@ const Galeria = ({ products }) => {
         <Col key={producto.id}>
           <Card
             className='galery-card'
-            onClick={() => handlerClick(producto.id)}
           >
-            <Card.Img variant='top' src={producto?.img} />
+            <Card.Img
+              variant='top'
+              src={producto?.img}
+              onClick={() => handlerClick(producto.id)}
+            />
             <Card.Body className='text-center'>
               <Card.Title>{producto?.titulo}</Card.Title>
               <Card.Text className='text-success'>

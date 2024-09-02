@@ -30,6 +30,21 @@
   grid-template-rows: 80px 120px calc(100vh - 280px) 80px;
 }
 
+.add-product-card {
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.add-product-title {
+  color: #000;
+  font-size: 2rem;
+}
+
+.add-product-text {
+  color: #91b502;
+  font-size: 1.25rem;
+}
+
 nav {
   grid-area: nav;
   flex-wrap: wrap;

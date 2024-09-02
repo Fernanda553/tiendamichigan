@@ -56,15 +56,13 @@ const Navigation = () => {
                   Iniciar sesión
                 </NavLink>
               )}
-              {!isAuthenticated && (
-                <NavLink
-                  to='/products'
-                  className={isActiveLink}
-                  onClick={() => document.getElementById('offcanvasNavbar').classList.remove('show')}
-                >
-                  Galería
-                </NavLink>
-              )}
+              <NavLink
+                to='/products'
+                className={isActiveLink}
+                onClick={() => document.getElementById('offcanvasNavbar').classList.remove('show')}
+              >
+                Galería
+              </NavLink>
               {isAuthenticated && (
                 <NavLink
                   to='/newproduct'

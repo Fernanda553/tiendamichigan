@@ -9,7 +9,7 @@ const Product = () => {
   const [producto, setProducto] = useState(null)
 
   useEffect(() => {
-    const baseUrl = import.meta.env.VITE_URLBASE
+    const baseUrl = import.meta.env.VITE_URLBASE ?? ''
 
     fetch(`${baseUrl}/products/${id}`)
       .then(response => response.json())
@@ -21,7 +21,7 @@ const Product = () => {
 
   return (
     <Container fluid>
-      <Card className='galery_one_card'>
+      <Card className='galery-card'>
         <Card.Img variant='top' src={producto.img} />
         <Card.Body>
           <Card.Title>{producto.titulo}</Card.Title>
